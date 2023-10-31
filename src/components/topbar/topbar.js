@@ -8,8 +8,12 @@ import {AiFillInstagram} from 'react-icons/ai'
 import { SettingContext } from '@/context/setting-context'
 import {RxCross2} from 'react-icons/rx'
 
+<<<<<<< HEAD
 function Topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
+=======
+function topbar() {
+>>>>>>> e0e7aef7de037fc8c79c75d28d5e7559a98452a1
   return (
     <div className='container mx-auto px-4 py-5'>
     <div className='flex justify-between items-center'>
@@ -17,9 +21,9 @@ function Topbar() {
         <img src="/cropped.webp" alt="" className='md:w-60 w-32' />
       </div>
       <button onClick={()=>setMobileNav(!mobileNav)}>
-      {
-        mobileNav ? <RxCross2 className="text-3xl md:hidden block"/> : <HiMenuAlt3 className="text-3xl md:hidden block" /> 
-      }
+      
+         {/* <RxCross2 className="text-3xl md:hidden block"/> : <HiMenuAlt3 className="text-3xl md:hidden block" />  */}
+      
       
       </button>
       <div className='hidden md:flex gap-3 text-blue-950'> {/* Hide on screens smaller than md */}

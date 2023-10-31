@@ -10,8 +10,6 @@ import Logo from '../components/logo/logo'
 import Footer from '@/components/footer/footer'
 import Testimonials from '../components/testimonials/Testimonials'
 
-
-
 export default function Home() {
   return (
 

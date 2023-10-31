@@ -6,19 +6,17 @@ import { SlArrowDown } from 'react-icons/sl'
 
 function Navbar() {
 
-  const { mobileNav, setMobileNav } = useContext(SettingContext)
-  const [openNav, setOpenNav] = useState<any>()
-  const [mobileSubNav, setMobileSubNav] = useState<any>()
+  const [openNav, setOpenNav] = useState()
+  const [mobileSubNav, setMobileSubNav] = useState()
 
-
-  const handleOpenNav = (idx: number) => {
+  const handleOpenNav = (idx) => {
     setOpenNav(idx)
   }
-  const handleCloseNav = (idx: number) => {
+  const handleCloseNav = (idx) => {
     setOpenNav(null)
   }
 
-  const handleNavClick = (idx: number) => {
+  const handleNavClick = (idx) => {
     if(idx === mobileSubNav){
       return setMobileSubNav(null)
     }
@@ -26,11 +24,11 @@ function Navbar() {
   }
 
   return (
-     <main className={`container mx-auto md:px-4 absolute md:relative left-0 md:!block right-0 z-50 ${mobileNav ? 'block' : 'hidden'}`}>
+     <main className={`container mx-auto md:px-4 absolute md:relative left-0 md:!block right-0 z-50 `}>
       <div className='bg-blue-950 text-white md:rounded-full flex items-center gap-6 md:justify-center py-8 md:py-2 p-5'>
         <ul className='flex flex-col md:flex-row md:items-center gap-6 w-full md:w-auto'>
           {
-            NavMenu.map((nav: any, idx: number) => {
+            NavMenu.map((nav, idx) => {
               return (
                 <li className='relative' key={idx} onClick={() => handleNavClick(idx)} onMouseEnter={() => handleOpenNav(idx)} onMouseLeave={() => handleCloseNav(idx)}>
                   <Link href="#" className='hover:text-[#C6A02E] flex items-center justify-between gap-2'>
@@ -42,7 +40,7 @@ function Navbar() {
                     nav?.subNav?.length > 0 &&
                     <ul className='absolute bg-blue-950 pt-4'>
                       {
-                        nav?.subNav?.map((sub: any, id: number) => (
+                        nav?.subNav?.map((sub, id) => (
                           <li key={id} className='p-4 hover:bg-[#C6A02E]'><Link href="#" className='whitespace-nowrap'>{sub.name}</Link></li>
                         ))
                       }
@@ -53,7 +51,7 @@ function Navbar() {
                     nav?.subNav?.length > 0 &&
                     <ul className='pt-4'>
                       {
-                        nav?.subNav?.map((sub: any, id: number) => (
+                        nav?.subNav?.map((sub, id) => (
                           <li key={id} className='p-4 hover:bg-[#C6A02E]'><Link href="#" className='whitespace-nowrap'>{sub.name}</Link></li>
                         ))
                       }
