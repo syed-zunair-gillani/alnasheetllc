@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl'
 
 
-function navbar() {
+function Navbar() {
 
   const { mobileNav, setMobileNav } = useContext(SettingContext)
   const [openNav, setOpenNav] = useState<any>()
@@ -74,7 +74,7 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar
 
 
 

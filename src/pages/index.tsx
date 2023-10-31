@@ -15,8 +15,7 @@ import Testimonials from '../components/testimonials/Testimonials'
 export default function Home() {
   return (
 
-    <main>
-
+    <>
       <Topbar />
       <Navbar />
       <Main />
@@ -27,6 +26,6 @@ export default function Home() {
       <Testimonials />
       <Logo />
       <Footer />
-    </main>
+    </>
   )
 }
