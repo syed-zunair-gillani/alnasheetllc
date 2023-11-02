@@ -51,34 +51,34 @@ export default block
 const services = [
   {
     name: "Audit and assurance",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "VAT-related services",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Management consultancy",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Cloud accounting",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Feasibility Report",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Liquidation of company",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Patent and Trademarks Registration",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   },
   {
     name: "Accounting Software Solutions",
-    icon: "/images/2.jpeg"
+    icon: "/images/tax.jpeg"
   }
 ]
