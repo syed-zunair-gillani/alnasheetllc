@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl'
 
 
-function Navbar() {
+function navbar() {
 
   const { mobileNav, setMobileNav } = useContext(SettingContext)
   const [openNav, setOpenNav] = useState<any>()
@@ -31,11 +31,12 @@ function Navbar() {
         <ul className='flex flex-col md:flex-row md:items-center gap-6 w-full md:w-auto'>
           {
             NavMenu.map((nav: any, idx: number) => {
-              return (
-                <li className='relative' key={idx} onClick={() => handleNavClick(idx)} onMouseEnter={() => handleOpenNav(idx)} onMouseLeave={() => handleCloseNav(idx)}>
+              return ( 
+                // onClick={() => handleNavClick(idx)}
+                <li className='relative' key={idx} onMouseEnter={() => handleOpenNav(idx)} onMouseLeave={() => handleCloseNav(idx)}>
                   <Link href="#" className='hover:text-[#C6A02E] flex items-center justify-between gap-2'>
                     {nav.name}
-                    {nav?.subNav && <SlArrowDown className="mt-1" />}
+                    {/* {nav?.subNav && <SlArrowDown className="mt-1" />} */}
                   </Link>
                   {
                     openNav === idx &&
@@ -66,7 +67,7 @@ function Navbar() {
         </ul>
         <div className='lg:flex items-center gap-12'>
           <a href="#" className='hidden lg:inline-block'>
-            <button className='bg-[#C6A02E] px-4 py-2 rounded-full'>Free Quote</button>
+            <button className='bg-[#C6A02E] px-4 py-2 rounded-full hover:scale-105'>Free Consultancy</button>
           </a>
         </div>
       </div>
@@ -74,11 +75,19 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default navbar
 
 
 
 const NavMenu = [
+  {
+    name: "Home",
+    link: "#",
+  },
+  {
+    name: "About Us",
+    link: "#",
+  },
   {
     name: "Audit & Assurance",
     link: "#",

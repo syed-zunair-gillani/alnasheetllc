@@ -31,9 +31,11 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     dots: true,
+    centerMode: true,
+    centerPadding: "0",
     arrows: false,
     responsive: [
       
@@ -65,7 +67,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className='text-center items-center justify-center p-4 mx-auto mt-10'>
               <div className=''>
-                <p className='p-6 mb-5 h-[220px] bg-white '>{testimonial.text}</p>
+                <p className='relative overflow-hidden p-6 pl-16 mb-5 h-[220px] bg-white testimonial'>
+                  {testimonial.text}
+                  <span className='z-10 absolute top-2 left-2 border p-2 text-4xl w-9 h-9 rounded-full'>”</span>
+                  <div className='absolute p-20 px-40 -top-10 -left-56 hidden qouteBg rotate-[135deg] bg-[#C6A02E]'/>
+                </p>
                 <p className='text-[20px]'>{testimonial.company}</p>
                 <p className='text-[#FFBC00] text-[18px]'>{testimonial.author}</p>
               </div>
