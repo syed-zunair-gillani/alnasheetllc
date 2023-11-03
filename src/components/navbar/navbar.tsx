@@ -28,7 +28,7 @@ function Navbar() {
   return (
      <main className={`container mx-auto md:px-4 absolute md:relative left-0 md:!block right-0 z-50 ${mobileNav ? 'block' : 'hidden'}`}>
       <div className='bg-blue-950 text-white md:rounded-full flex items-center gap-6 md:justify-center py-8 md:py-2 p-5'>
-        <ul className='flex flex-col md:flex-row md:items-center gap-6 w-full md:w-auto'>
+        <ul className='flex flex-col md:flex-row md:items-center gap-4 w-full md:w-auto'>
           {
             NavMenu.map((nav: any, idx: number) => {
               return ( 
@@ -85,10 +85,6 @@ const NavMenu = [
     link: "#",
   },
   {
-    name: "About Us",
-    link: "#",
-  },
-  {
     name: "Audit & Assurance",
     link: "#",
     subNav: [
@@ -121,11 +117,8 @@ const NavMenu = [
     link: "#"
   },
   {
-    name: "Vat",
+    name: "Tax",
     link: "#"
   },
-  {
-    name: "Blogs",
-    link: "#"
-  },
+  
 ]
