@@ -67,7 +67,7 @@ function Navbar() {
         </ul>
         <div className='lg:flex items-center gap-12'>
           <a href="#" className='hidden lg:inline-block'>
-            <button className='bg-[#C6A02E] px-4 py-2 rounded-full hover:scale-105'>Free Consultancy</button>
+            <button className='bg-[#C6A02E] px-4 py-2 hover:text-blue-950 rounded-full hover:scale-105'>Free Consultancy</button>
           </a>
         </div>
       </div>
