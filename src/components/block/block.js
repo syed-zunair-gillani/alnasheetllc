@@ -6,7 +6,7 @@ function block() {
     <>
     <section className='container px-4 mx-auto'>
       <div className='grid gap-4 lg:grid-cols-2 lg:mt-14 mt-3 items-center mx-auto justify-center'>
-        <div className='text-[18px] mt-3'>
+        <div className='lg:text-[18px] mt-3'>
           <div className='pb-6'>
             <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'><span className='px-2 py-2  bg-blue-950 text-[#C6A02E]'>What</span> We Do</h2>
           </div>
@@ -52,34 +52,34 @@ export default block
 const services = [
   {
     name: "Audit and assurance",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Audit_and_assurance.png"
   },
   {
     name: "VAT-related services",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Vat.png"
   },
   {
     name: "Management consultancy",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Management_consultancy.png"
   },
   {
     name: "Cloud accounting",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Cloud_Accoutning.png"
   },
   {
     name: "Feasibility Report",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Feasibility_Report.png"
   },
   {
     name: "Liquidation of company",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Liquidation_of_Company.png"
   },
   {
     name: "Patent and Trademarks Registration",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Patent_and_Trademarks_Registration.png"
   },
   {
     name: "Accounting Software Solutions",
-    icon: "/images/tax.jpeg"
+    icon: "/images/Accounting_Software_Solutions.png"
   }
 ]

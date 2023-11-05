@@ -10,7 +10,7 @@ function blogcard() {
          <div className='grid lg:grid-cols-3 md:grid-cols-2 mt-10 gap-8'>
             {
                [1, 2, 3].map((item, id) => (
-                  <div key={id} className='border-2  border-none shadow-xl pb-2'>
+                  <div key={id} className='hover:shadow-lg pb-2 border'>
                      <img src="3.jpeg" alt="" className='w-full h-[40vh]' />
                      <div className='px-6 py-2 flex flex-col justify-between'>
                         <h2 className='font-[600] pt-3 text-lg'>Cloud Accounting and Its Rise</h2>
