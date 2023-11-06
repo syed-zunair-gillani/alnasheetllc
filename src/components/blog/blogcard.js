@@ -11,7 +11,7 @@ function blogcard() {
             {
                [1, 2, 3].map((item, id) => (
                   <div key={id} className='hover:shadow-lg pb-2 border'>
-                     <img src="3.jpeg" alt="" className='w-full h-[40vh]' />
+                     <img src="3.jpeg" alt="" className='w-full h-[15rem]' />
                      <div className='px-6 py-2 flex flex-col justify-between'>
                         <h2 className='font-[600] pt-3 text-lg'>Cloud Accounting and Its Rise</h2>
                         <p className='py-5 text-sm lg:text-base'>The bodies were lying in the streets un-buried. All railroads and vessels carrying food and such things into the great city had ceased runnings and mobs of the hungry poor pillaging.</p>

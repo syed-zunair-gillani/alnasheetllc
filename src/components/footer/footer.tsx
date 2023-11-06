@@ -23,7 +23,7 @@ function footer() {
                         Dubai, UAE
                         P.O Box 380506</p>
                 </div>
-                <div className='border mt-4'></div>
+                <div className='border-b-[1px] mt-4'></div>
                 <div className='mt-5'>
                      <div className='flex gap-4'>
                         <BsFillTelephoneFill className='mt-1 text-[#C6A02E]'/>
@@ -34,12 +34,12 @@ function footer() {
                         <p>+971 58 6900536</p>
                      </div>
                 </div>
-                <div className='border mt-4'></div>
+                <div className='border-b-[1px] mt-4'></div>
                 <div className='flex gap-4 mt-4'>
                     <GrMail className='mt-1 text-[#C6A02E]'/>
                     <p>Info@alnasheetllc.com</p>
                 </div>
-                <div className='border mt-4'></div>
+                <div className='border-b-[1px] mt-4'></div>
                 <div className='flex gap-4 mt-4'>
                     <AiOutlineClockCircle className='mt-1 text-[#C6A02E]'/>  
                     <p>Monday - Friday 08:00 - 06:00</p>        
@@ -107,9 +107,9 @@ function footer() {
            </div>
            
         </div>
-        <div className='border mt-10'></div>
+        <div className='border-t-[1px] mt-10'></div>
         <div className='container mx-auto px-4'>
-          <div className='flex justify-between py-3 md:flex-row'>
+          <div className='flex justify-between py-4 md:flex-row'>
             <div>
                 <p className='text-white text-[10px]'>© 2022 AL NASHEET - DESIGN AND DEVELOPED BY CATCHY DESIGNZ</p>
             </div>
