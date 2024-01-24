@@ -7,15 +7,16 @@ import {BsLinkedin} from 'react-icons/bs'
 import {AiFillInstagram} from 'react-icons/ai'
 import { SettingContext } from '@/context/setting-context'
 import {RxCross2} from 'react-icons/rx'
+import Link from 'next/link'
 
 function Topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
   return (
     <div className='container mx-auto px-8 py-5'>
     <div className='flex justify-between items-center'>
-      <div>
+      <Link href="/">
         <img src="/cropped.webp" alt="" className='md:w-60 w-32' />
-      </div>
+      </Link>
       <button onClick={()=>setMobileNav(!mobileNav)}>
       {
         mobileNav ? <RxCross2 className="text-3xl md:hidden block"/> : <HiMenuAlt3 className="text-3xl md:hidden block" /> 
