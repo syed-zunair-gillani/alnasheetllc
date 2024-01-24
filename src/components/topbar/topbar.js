@@ -8,7 +8,7 @@ import {AiFillInstagram} from 'react-icons/ai'
 import { SettingContext } from '@/context/setting-context'
 import {RxCross2} from 'react-icons/rx'
 
-function topbar() {
+function Topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
   return (
     <div className='container mx-auto px-4 py-5'>
@@ -48,4 +48,4 @@ function topbar() {
   )
 }
 
-export default topbar
+export default Topbar
