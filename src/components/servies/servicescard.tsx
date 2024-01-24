@@ -5,63 +5,72 @@ const servicesData = [
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
   {
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
   {
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
   {
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
   {
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
   {
     id: 1,
     title: 'Audit & Assurance',
     description: 'Your financial statements will carry more.',
-    image: '/2.webp',
+    image: '/pic (1).png',
   },
 
 ];
 
 function ServicesCard({ service }: any) {
   return (
-    <>
-      <div className='w-full !bg-cover rounded-xl overflow-hidden !bg-no-repeat h-[320px]' style={{ background: `url(${service.image})` }}>
-        <div className='relative h-full group w-full'>
-          <div className='h-full absolute -bottom-[250px] group-hover:bottom-0 text-white transition-all duration-500 ease-in-out w-full bg-[#172554]/70 group-hover:bg-[#172554] border-l-[6px] p-5 border-[#C6A02E]'>
-            <h6 className='text-center font-semibold text-lg'>{service?.title}</h6>
-            <p className='text-center mt-7'>{service.description}</p>
+
+    <div className="flip-box">
+      <div className="flip-box-inner">
+        <div className="flip-box-front flex flex-col justify-center items-center">
+          <div>
+            <img src={service.image} alt={service.title} className='w-40 mx-auto' />
+          </div>
+          <div className='mt-3'>
+            <h3 className='text-[23px] font-bold'>{service.title}</h3>
+            <p>{service.description}</p>
           </div>
         </div>
+        <div className="flip-box-back flex justify-center flex-col items-center">
+          <p>services info</p>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
 function ServicesCardContainer() {
   return (
-    <div className='max-w-[1000px] mx-auto px-4 items-center py-10 pt-16'>
+    <div className='container mx-auto px-4 items-center py-10'>
       <div className='text-center text-5xl font-bold '>
-        <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'><span className='px-2 py-2 bg-blue-950 text-[#C6A02E]'>Our</span> Services</h2>
+        <h2 className='text-blue-950'>
+          <span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Services
+        </h2>
       </div>
-      <div className='grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center gap-5 lg:gap-10'>
+      <div className='grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center gap-8'>
         {servicesData.map((service, idx) => (
           <ServicesCard key={idx} service={service} />
         ))}

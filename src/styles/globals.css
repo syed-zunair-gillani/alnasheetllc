@@ -38,10 +38,6 @@ body{
      font-family: graphik !important;
 }
 
-.container{
-     max-width: 1170px !important;
-}
-
 .flip-box {
      perspective: 1000px;
      background-color: transparent;
@@ -106,12 +102,4 @@ body{
 .slick-dots li.slick-active{
      background-color: #172554;
      color: #172554;
-}
-
-.slick-center .testimonial{
-     background: #172554;
-     color: white;
-}
-.slick-center .qouteBg{
-     display: block;
 }

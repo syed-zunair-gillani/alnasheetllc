@@ -8,19 +8,19 @@ import {AiFillInstagram} from 'react-icons/ai'
 import { SettingContext } from '@/context/setting-context'
 import {RxCross2} from 'react-icons/rx'
 
-function Topbar() {
+function topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
   return (
-    <div className='container mx-auto px-4 py-6 lg:px-10'>
+    <div className='container mx-auto px-4 py-5'>
     <div className='flex justify-between items-center'>
       <div>
-        <img src="/cropped.webp" alt="" className='md:w-56 w-32' />
+        <img src="/cropped.webp" alt="" className='md:w-60 w-32' />
       </div>
-
-      <button className='md:hidden' onClick={()=>setMobileNav(!mobileNav)}>
+      <button onClick={()=>setMobileNav(!mobileNav)}>
       {
         mobileNav ? <RxCross2 className="text-3xl md:hidden block"/> : <HiMenuAlt3 className="text-3xl md:hidden block" /> 
       }
+      
       </button>
       <div className='hidden md:flex gap-3 text-blue-950'> {/* Hide on screens smaller than md */}
         <FaPhoneAlt className='text-2xl mt-3'/>
@@ -36,7 +36,7 @@ function Topbar() {
           <p>Info@alnasheetllc.com</p>
         </div>
       </div>
-      <div className='hidden lg:flex gap-3'> {/* Hide on screens smaller than md */}
+      <div className='hidden lg:flex gap-5'> {/* Hide on screens smaller than md */}
         <div className='bg-blue-950 px-2 py-2 rounded-full'> <FaFacebook className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'> <BsTwitter className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'><BsLinkedin className=' text-white text-2xl'/></div>
@@ -48,4 +48,4 @@ function Topbar() {
   )
 }
 
-export default Topbar
+export default topbar
