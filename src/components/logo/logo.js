@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
 
-function logo() {
+function Logo() {
   return (
     <main className='container mx-auto px-4'>
       <div className='py-10'>
@@ -19,7 +19,7 @@ function logo() {
   )
 }
 
-export default logo
+export default Logo
 
 
 const settings = {

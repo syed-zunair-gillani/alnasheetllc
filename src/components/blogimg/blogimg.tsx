@@ -1,6 +1,6 @@
 import React from 'react'
 
-function blogimg() {
+function Blogimg() {
   return (
    <div>
      <div className='bg-blue-800 bg-cover'>
@@ -71,4 +71,4 @@ function blogimg() {
   )
 }
 
-export default blogimg
+export default Blogimg

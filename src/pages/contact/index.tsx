@@ -1,17 +1,17 @@
 import React from 'react'
 import Topbar from '@/components/topbar/topbar'
 import Mainimg from '@/components/contact/mainimg'
-import Contact from '@/components/contact/contact'
+import ContactForm from '@/components/contact/contact'
 import Footer from '@/components/footer/footer'
-function index() {
+function Contact() {
   return (
     <main>
        <Topbar/>
        <Mainimg/>
-       <Contact/>
+       <ContactForm/>
        <Footer/>
     </main>
   )
 }
 
-export default index
+export default Contact

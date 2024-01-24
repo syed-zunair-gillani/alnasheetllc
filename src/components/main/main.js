@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-function main() {
+function Main() {
 
   return (
     <main className='md:-mt-[60px]'>
@@ -19,4 +19,4 @@ function main() {
   )
 }
 
-export default main
+export default Main

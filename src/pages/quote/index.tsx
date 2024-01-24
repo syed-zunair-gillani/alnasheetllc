@@ -1,6 +1,6 @@
 import React from 'react'
 import Quote from '@/components/quote/quote'
-function index() {
+function Qoute() {
   return (
     <main>
         <Quote/>
@@ -8,4 +8,4 @@ function index() {
   )
 }
 
-export default index
+export default Qoute

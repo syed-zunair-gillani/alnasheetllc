@@ -1,6 +1,6 @@
 import React from 'react'
 
-function mainimg() {
+function MainImg() {
   return (
     <main>
           <div className='bg-blue-800 bg-cover'>
@@ -10,4 +10,4 @@ function mainimg() {
   )
 }
 
-export default mainimg
+export default MainImg

@@ -2,7 +2,7 @@ import React from 'react'
 import Blogimg from '@/components/blogimg/blogimg'
 import Topbar from '@/components/topbar/topbar'
 import Footer from '@/components/footer/footer'
-function index() {
+function Blogs() {
   return (
     <main>
         <Topbar/>  
@@ -12,4 +12,4 @@ function index() {
   )
 }
 
-export default index
+export default Blogs

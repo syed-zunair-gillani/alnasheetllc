@@ -1,6 +1,6 @@
 import React from 'react'
 
-function block() {
+function Block() {
   return (
     <main className='container px-4 mx-auto'>
       <div className='lg:mt-20 mt-8 text-center'>
@@ -70,4 +70,4 @@ function block() {
   )
 }
 
-export default block
+export default Block

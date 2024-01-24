@@ -1,6 +1,6 @@
 import React from 'react'
 
-function blogcard() {
+function Blogcard() {
   return (
     <main className='container mx-auto px-4'>
     <div className='mt-14'>
@@ -39,4 +39,4 @@ function blogcard() {
   )
 }
 
-export default blogcard
+export default Blogcard
