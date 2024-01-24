@@ -103,3 +103,46 @@ body{
      background-color: #172554;
      color: #172554;
 }
+
+.content p{
+     color: gray;
+     margin-top: .8rem;
+}
+
+.content h2{
+     font-weight: 600;
+     font-size: 30px;
+     color: #172554;
+     margin-top: .5rem;
+}
+.content h3{
+     font-weight: 600;
+     font-size: 28px;
+     color: #172554;
+     margin-top: .5rem;
+}
+.content h4{
+     font-weight: 600;
+     font-size: 26px;
+     color: #172554;
+     margin-top: .5rem;
+}
+.content h5{
+     font-weight: 600;
+     font-size: 24px;
+     color: #172554;
+     margin-top: .5rem;
+}
+.content h6{
+     font-weight: 600;
+     font-size: 22px;
+     color: #172554;
+     margin-top: .5rem;
+}
+.content ul{
+     margin-top: .8rem;
+     color: gray;
+}
+.content ul li{
+     margin-top: 10px;
+}

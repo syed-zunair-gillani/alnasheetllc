@@ -11,7 +11,7 @@ import {RxCross2} from 'react-icons/rx'
 function Topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
   return (
-    <div className='container mx-auto px-4 py-5'>
+    <div className='container mx-auto px-8 py-5'>
     <div className='flex justify-between items-center'>
       <div>
         <img src="/cropped.webp" alt="" className='md:w-60 w-32' />
@@ -36,7 +36,7 @@ function Topbar() {
           <p>Info@alnasheetllc.com</p>
         </div>
       </div>
-      <div className='hidden lg:flex gap-5'> {/* Hide on screens smaller than md */}
+      <div className='hidden lg:flex gap-3'> {/* Hide on screens smaller than md */}
         <div className='bg-blue-950 px-2 py-2 rounded-full'> <FaFacebook className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'> <BsTwitter className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'><BsLinkedin className=' text-white text-2xl'/></div>

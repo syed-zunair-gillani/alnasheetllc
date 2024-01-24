@@ -9,6 +9,7 @@ import { BsFacebook } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
+import ContactForm from '../contact/form'
 function Footer() {
     return (
         <main className='bg-[#001D49] '>
@@ -90,19 +91,9 @@ function Footer() {
                         </div>
                     </div>
                     <div className='lg:mt-10 mt-5'>
-                        <h3 className='text-2xl font-[600]'>Get In Touch</h3>
-                        <div className='lg:mt-14 mt-5'>
-                            <input type="text" className='lg:w-72 w-full px-3 border py-1 transform bg-[#001D49] outline-none' placeholder='Name' />
-                        </div>
-                        <div className='mt-4'>
-                            <input type="text" className='lg:w-72 w-full px-3 border py-1 transform bg-[#001D49] outline-none' placeholder='Email' />
-                        </div>
-                        <div className='mt-4'>
-                            <textarea name="" id="" rows={3} className='lg:w-72 w-full px-3 border py-1 transform bg-[#001D49] outline-none' placeholder='Message'></textarea>
-                        </div>
-                        <div>
-                            <button className='bg-[#C6A02E] px-6 py-2 rounded-lg'>Send</button>
-                        </div>
+                    <h3 className='text-2xl font-[600] lg:mb-14 mb-5'>Get In Touch</h3>
+
+                        <ContactForm/>
                     </div>
                 </div>
 
