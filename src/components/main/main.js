@@ -5,9 +5,9 @@ function Main() {
   return (
     <main className='md:-mt-[60px]'>
       <div className="bg-cover bg-center md:mt-8 py-20 w-full flex flex-col justify-center items-center h-[80vh]" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/main.jpg')` }}>
-        <div className=' lg:px-10 container mx-auto px-4 text-white'>
+        <div className='container mx-auto px-4 text-white'>
           <h1 className='font-semibold text-3xl md:text-4xl lg:text-5xl mb-6 '><span className=' bg-blue-950 py-1 px-3  leading-relaxed  '>Accounting</span> & <br />  Bookkeeping</h1>
-          <p className='text-base md:text-lg lg:text-lg xl:text-xl mb-6 sm:w-[80vh] lg:w-[85vh] w-full'>
+          <p className='text-base md:text-lg lg:text-lg xl:text-xl mb-6 max-w-[600px] w-full'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique eveniet suscipit vero, recusandae deserunt atque quam rerum labore? atque quam rerum labore?
           </p>
           <button className='px-7 py-3 bg-blue-900 hover:bg-blue-800 text-white rounded focus:outline-none transition duration-300 text-[16px]'>
