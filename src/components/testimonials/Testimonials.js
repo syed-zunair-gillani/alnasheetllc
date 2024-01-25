@@ -59,7 +59,7 @@ const Testimonials = () => {
     <div className="bg-gray-100 h-auto w-full py-20">
       <div className='container mx-auto px-4'>
         <div>
-          <h2 className='text-2xl text-blue-950 md:text-4xl lg:text-5xl font-bold'><span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Testimonials</h2>
+          <h2 className='text-blue-950 md:text-[42px] text-[32px] font-[600]'><span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Testimonials</h2>
         </div>
         <Slider {...settings} className=''>
           {testimonials.map((testimonial, index) => (

@@ -12,7 +12,7 @@ function PageBanner() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="z-10 text-center conatiner mx-auto px-4">
           <h1 className="text-4xl font-bold">Our Services</h1>
-          <div className='flex gap-2 justify-center'>
+          <div className='flex gap-2 mt-2 justify-center'>
             <Link href="/" className="text-blue-400">Home</Link>
             <span>/</span>
             <span>Services</span>

@@ -62,14 +62,14 @@ function ServicesCard({ service }: any) {
   );
 }
 
-function ServicesCardContainer() {
+function ServicesCardContainer({heading}:any) {
   return (
-    <div className='container mx-auto px-4 items-center py-10'>
-      <div className='text-center text-5xl font-bold '>
-        <h2 className='text-blue-950'>
+    <div className='container mx-auto px-4 items-center py-10 pt-12'>
+      {heading && <div className='text-center'>
+        <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'>
           <span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Services
         </h2>
-      </div>
+      </div>}
       <div className='grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center gap-8'>
         {servicesData.map((service, idx) => (
           <ServicesCard key={idx} service={service} />

@@ -10,12 +10,13 @@ function Main() {
           <p className='text-base md:text-lg lg:text-lg xl:text-xl mb-6 sm:w-[80vh] lg:w-[85vh] w-full'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique eveniet suscipit vero, recusandae deserunt atque quam rerum labore? atque quam rerum labore?
           </p>
-          <button className='px-6 py-2 bg-blue-900 hover:bg-blue-800 text-white rounded focus:outline-none transition duration-300 text-[16px]'>
+          <button className='px-7 py-3 bg-blue-900 hover:bg-blue-800 text-white rounded focus:outline-none transition duration-300 text-[16px]'>
             Read More
           </button>
         </div>
       </div>
     </main>
+
   )
 }
 

@@ -6,7 +6,7 @@ function having() {
   return (
     <section className='py-10'>
       <div
-        className="relative bg-cover bg-center h-auto py-14 flex items-center justify-center text-white "
+        className="relative bg-cover bg-center h-auto py-20 flex items-center justify-center text-white "
         style={{
           backgroundImage: 'url("/top-view.jpg")',
         }}
@@ -16,7 +16,7 @@ function having() {
         <h1 className="text-4xl font-bold">Having Trouble Managing Your Finances?</h1>
         <p className='py-6'>Sed tincidunt accumsan lacus nec bibendum sapien aliquet ut suspendisse. Pharetra <br />finibus condimentum aenean lacinia sem metus Integer dapibus diam justo.</p>
         <Link href=""> 
-        <button className='flex gap-3 mx-auto items-center justify-center bg-blue-500 px-5 py-2 h-16 w-60 rounded-md'>CONTACT US NOW <GoArrowUpRight /></button>
+        <button className='flex gap-3 mx-auto items-center justify-center bg-[#C6A02E] hover:scale-105 transition-all duration-200 ease-linear px-5 py-2 h-16 w-60 rounded-md'>CONTACT US NOW <GoArrowUpRight /></button>
         </Link>
         
         </div>
