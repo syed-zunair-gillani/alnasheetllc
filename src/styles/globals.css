@@ -37,7 +37,9 @@
 body{
      font-family: graphik !important;
 }
-
+.container{
+     max-width : 1280px
+}
 .flip-box {
      perspective: 1000px;
      background-color: transparent;
