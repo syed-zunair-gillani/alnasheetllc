@@ -1,6 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
+import { TfiQuoteRight } from "react-icons/tfi";
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -33,7 +35,7 @@ const Testimonials = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    dots: true,
+    dots: false,
     arrows: false,
     responsive: [
       
@@ -56,18 +58,24 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-gray-100 h-auto w-full py-20">
+    <div className="bg-[#001D49] h-auto w-full py-16 mt-10">
       <div className='container mx-auto px-4'>
-        <div>
+        {/* <div>
           <h2 className='text-blue-950 md:text-[42px] text-[32px] font-[600]'><span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Testimonials</h2>
-        </div>
+        </div> */}
         <Slider {...settings} className=''>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className='text-center items-center justify-center p-4 mx-auto mt-10'>
-              <div className=''>
-                <p className='p-6 mb-5 h-[220px] bg-white '>{testimonial.text}</p>
-                <p className='text-[20px]'>{testimonial.company}</p>
-                <p className='text-[#FFBC00] text-[18px]'>{testimonial.author}</p>
+            <div key={index} className='items-center justify-center p-2 mx-auto'>
+              <div className='border border-[#FFBC00] p-6 rounded-xl'>
+              <TfiQuoteRight className="text-6xl text-[#FFBC00] opacity-30"/>
+                <p className='text-gray-400 -mt-6 z-[1] relative'>{testimonial.text}</p>
+                <div className="flex gap-3 items-center mt-5">
+                    <Image src="/images/p1.jpeg" alt="profile-image" width={80} height={80} className=' rounded-full h-[60px] w-[60px] object-cover'/>
+                    <div>
+                      <p className='font-medium text-white'>{testimonial.company}</p>
+                      <p className='text-[#FFBC00] text-sm'>{testimonial.author}</p>
+                    </div>
+                </div>
               </div>
             </div>
           ))}

@@ -8,6 +8,9 @@ import Testimonials from '../components/testimonials/Testimonials'
 import { VscGraph } from "react-icons/vsc";
 import { GiReceiveMoney } from "react-icons/gi";
 import Having from '@/components/servicespage/having'
+import WhyChooseUs from '@/components/WhyChooseUs'
+import Ourstages from '@/components/servicespage/ourstages'
+import Faqs from '@/components/faqs'
 
 export default function Home() {
   return (
@@ -33,9 +36,11 @@ export default function Home() {
       <Strategies />
       <Services heading/>
       <Having/>
+      <WhyChooseUs/>
+      <Ourstages background/>
       <Blogcard />
       <Testimonials />
-      <Logo />
+      <Faqs/>
     </main>
   )
 }
