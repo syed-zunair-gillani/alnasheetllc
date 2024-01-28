@@ -5,6 +5,7 @@ import Partner from '@/components/servicespage/partner'
 import PageBanner from '@/components/servicespage/PageBanner'
 import Services from '../../components/servies/servicescard'
 import PricingTable from '@/components/pricing-table/pricingTable'
+import WhyChooseUs from '@/components/WhyChooseUs'
 
 function ServicesPage() {
   return (
@@ -13,7 +14,8 @@ function ServicesPage() {
       <Services/>
       <Having/>
       <PricingTable/>
-      <Ourstages/>
+      <Ourstages background/>
+      <WhyChooseUs/>
     </>
   )
 }

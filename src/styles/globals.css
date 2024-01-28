@@ -38,7 +38,7 @@ body{
      font-family: graphik !important;
 }
 .container{
-     max-width : 1280px
+     max-width : 1180px
 }
 .flip-box {
      perspective: 1000px;
@@ -147,4 +147,8 @@ body{
 }
 .content ul li{
      margin-top: 10px;
+}
+.ReactModal__Overlay{
+     z-index: 1111;
+     background: rgba(0, 0, 0, 0.49) !important;
 }

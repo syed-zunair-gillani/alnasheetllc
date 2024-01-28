@@ -7,7 +7,7 @@ function Ourstages({background}:any) {
   return (
     <section className={`md:pb-16 pt-12 ${background && 'bg-[#172554] text-white'}`}>
       <div className='grid lg:grid-cols-2 items-center md:grid-cols-2 grid-cols-1 gap-7 container px-4 mx-auto'>
-        <div className='order-2'>
+        <div className='order-2 md:order-none'>
           <div className='flex gap-3 items-center'>
             <div className='border py-3 px-3 rounded-md border-[#C6A02E] '>
               <BsFillPersonLinesFill className="text-5xl text-[#C6A02E]  " />

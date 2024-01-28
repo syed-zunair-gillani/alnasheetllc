@@ -45,8 +45,8 @@ const WhyChooseUs = () => {
                </div>
                <div>
                     <Image src="/cheerful-business-team-discussing-project-L7SEHE4.jpeg" alt="image" width={400} height={400} className='w-full pl-10 lg:pl-0'/>
-                    <div className='bg-[#01B7D6] text-white p-7 z-10 relative lg:-ml-10 -mt-24 text-center w-[250px] lg:w-[300px] md:p-10 gap-4 text-xl lg:text-2xl rounded-xl shadow-lg'>
-                         <h4 className='text-3xl lg:text-5xl font-semibold mt-2 md:mt-0'>15 <sup>Th</sup></h4>
+                    <div className='bg-[#01B7D6] text-white p-7 z-10 relative lg:-ml-10 -mt-24 text-center w-[250px] lg:w-[300px] md:p-12 gap-4 text-xl lg:text-2xl rounded-xl shadow-lg'>
+                         <h4 className='text-3xl lg:text-5xl font-semibold mt-2 md:mt-0'>15 <sup className='text-lg'>Th</sup></h4>
                          <p className='mt-2'>Years Experience</p>
                     </div>
                </div>

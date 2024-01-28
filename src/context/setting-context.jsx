@@ -1,17 +1,29 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from "react";
 
-export const SettingContext = createContext()
+export const SettingContext = createContext();
 
-const SettingsProvider = ({children}) => {
-     const [mobileNav, setMobileNav] = useState(false)
+const SettingsProvider = ({ children }) => {
+  const [mobileNav, setMobileNav] = useState(false);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
-     return (
-          <SettingContext.Provider value={{
-               mobileNav, setMobileNav
-          }}>
-          {children}
-          </SettingContext.Provider>
-     )
-}
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
 
-export default SettingsProvider
+  return (
+    <SettingContext.Provider
+      value={{
+        mobileNav,
+        setMobileNav,
+        modalIsOpen, setIsOpen, openModal, closeModal
+      }}
+    >
+      {children}
+    </SettingContext.Provider>
+  );
+};
+
+export default SettingsProvider;

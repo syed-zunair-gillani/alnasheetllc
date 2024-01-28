@@ -8,6 +8,7 @@ import {AiFillInstagram} from 'react-icons/ai'
 import { SettingContext } from '@/context/setting-context'
 import {RxCross2} from 'react-icons/rx'
 import Link from 'next/link'
+import { RiTwitterXFill } from "react-icons/ri";
 
 function Topbar() {
   const {mobileNav, setMobileNav} = useContext(SettingContext)
@@ -39,7 +40,7 @@ function Topbar() {
       </div>
       <div className='hidden lg:flex gap-3'> {/* Hide on screens smaller than md */}
         <div className='bg-blue-950 px-2 py-2 rounded-full'> <FaFacebook className=' text-white text-2xl'/></div>
-        <div className='bg-blue-950 px-2 py-2 rounded-full'> <BsTwitter className=' text-white text-2xl'/></div>
+        <div className='bg-blue-950 px-2 py-2 rounded-full'> <RiTwitterXFill className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'><BsLinkedin className=' text-white text-2xl'/></div>
         <div className='bg-blue-950 px-2 py-2 rounded-full'><AiFillInstagram className=' text-white text-2xl'/></div>
       </div>

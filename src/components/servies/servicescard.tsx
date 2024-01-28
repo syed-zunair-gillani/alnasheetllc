@@ -43,18 +43,18 @@ const servicesData = [
 function ServicesCard({ service }: any) {
   return (
 
-    <div className="flip-box">
+    <div className="flip-box rounded-xl overflow-hidden hover:shadow-xl">
       <div className="flip-box-inner">
         <div className="flip-box-front flex flex-col justify-center items-center">
           <div>
-            <img src={service.image} alt={service.title} className='w-40 mx-auto' />
+            <img src={service.image} alt={service.title} className='w-28 mx-auto' />
           </div>
-          <div className='mt-3'>
-            <h3 className='text-[23px] font-bold'>{service.title}</h3>
+          <div className='mt-3 px-3'>
+            <h3 className='text-[23px] font-semibold'>{service.title}</h3>
             <p>{service.description}</p>
           </div>
         </div>
-        <div className="flip-box-back flex justify-center flex-col items-center">
+        <div className="flip-box-back flex justify-center flex-col items-center rounded-xl">
           <p>services info</p>
         </div>
       </div>
@@ -70,7 +70,7 @@ function ServicesCardContainer({heading}:any) {
           <span className='bg-blue-950 py-1 px-3 text-white'>Our</span> Services
         </h2>
       </div>}
-      <div className='grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center gap-8'>
+      <div className='grid mt-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between items-center gap-4'>
         {servicesData.map((service, idx) => (
           <ServicesCard key={idx} service={service} />
         ))}

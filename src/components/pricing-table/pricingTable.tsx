@@ -12,7 +12,7 @@ const PricingTable = () => {
                               growth.</p>
 
                     </div>
-                    <div className="grid gap-8 xl:grid-cols-3 xl:gap-10">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
                          <div
                               className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border border-gray-400 shadow xl:max-w-lg xl:p-8">
                               <h3 className="mb-4 text-2xl font-medium text-gray-900 ">Starter</h3>

@@ -6,7 +6,7 @@ import { SlArrowDown } from 'react-icons/sl'
 
 function Navbar() {
 
-  const { mobileNav, setMobileNav } = useContext(SettingContext)
+  const { mobileNav, setMobileNav, openModal } = useContext(SettingContext)
   const [openNav, setOpenNav] = useState<any>()
   const [mobileSubNav, setMobileSubNav] = useState<any>()
 
@@ -65,9 +65,7 @@ function Navbar() {
           }
         </ul>
         <div className='lg:flex items-center gap-12'>
-          <a href="#" className='hidden lg:inline-block'>
-            <button className='bg-[#C6A02E] px-4 py-2 rounded-full'>Free Quote</button>
-          </a>
+            <button onClick={openModal} className='bg-[#C6A02E] px-4 hidden lg:inline-block py-2 rounded-full'>Free Quote</button>
         </div>
       </div>
     </main>

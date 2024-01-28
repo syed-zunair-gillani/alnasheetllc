@@ -4,13 +4,16 @@ import SettingsProvider from '@/context/setting-context'
 import Topbar from '@/components/topbar/topbar'
 import Navbar from '@/components/navbar/navbar'
 import Footer from '@/components/footer/footer'
+import Qoute from '@/components/models/model'
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return(
     <SettingsProvider>
       <Topbar />
       <Navbar />
       <Component {...pageProps} />
+      <Qoute />
       <Footer />
     </SettingsProvider>
   ) 

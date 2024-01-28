@@ -6,10 +6,12 @@ import { GrMail } from 'react-icons/gr'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { IoIosArrowForward } from 'react-icons/io'
 import { BsFacebook } from 'react-icons/bs'
-import { BsTwitter } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 import { AiFillInstagram } from 'react-icons/ai'
 import ContactForm from '../contact/form'
+import { RiTwitterXFill } from "react-icons/ri";
+
+
 function Footer() {
     return (
         <main className='bg-[#001D49] '>
@@ -24,7 +26,7 @@ function Footer() {
                                 Dubai, UAE
                                 P.O Box 380506</p>
                         </div>
-                        <div className='border mt-4'></div>
+                        <div className='border-b-[1px] border-gray-500 mt-4'></div>
                         <div className='mt-5'>
                             <div className='flex gap-4'>
                                 <BsFillTelephoneFill className='mt-1 text-[#C6A02E]' />
@@ -35,12 +37,12 @@ function Footer() {
                                 <p>+971 58 6900536</p>
                             </div>
                         </div>
-                        <div className='border mt-4'></div>
+                        <div className='border-b-[1px] border-gray-500 mt-4'></div>
                         <div className='flex gap-4 mt-4'>
                             <GrMail className='mt-1 text-[#C6A02E]' />
                             <p>Info@alnasheetllc.com</p>
                         </div>
-                        <div className='border mt-4'></div>
+                        <div className='border-b-[1px] border-gray-500 mt-4'></div>
                         <div className='flex gap-4 mt-4'>
                             <AiOutlineClockCircle className='mt-1 text-[#C6A02E]' />
                             <p>Monday - Friday 08:00 - 06:00</p>
@@ -98,15 +100,15 @@ function Footer() {
                 </div>
 
             </div>
-            <div className='border mt-10'></div>
+            <div className='border-b-[1px] border-blue-950 mt-10'></div>
             <div className='container mx-auto px-4'>
-                <div className='flex justify-between py-3 md:flex-row'>
+                <div className='flex justify-between py-5 md:flex-row'>
                     <div>
                         <p className='text-white text-[10px]'>© 2022 AL NASHEET - DESIGN AND DEVELOPED BY CATCHY DESIGNZ</p>
                     </div>
                     <div className='text-white items-center flex gap-5'>
                         <BsFacebook />
-                        <BsTwitter />
+                        <RiTwitterXFill />
                         <BsLinkedin />
                         <AiFillInstagram />
                     </div>
