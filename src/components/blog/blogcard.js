@@ -34,7 +34,7 @@ function Blogcard() {
            </div>
        </div>
        <div className='text-center py-10'>
-        <button className='text-blue-950 px-8 text-[20px] hover:bg-blue-950 hover:text-[#C6A02E] bg-[#C6A02E] p-3 rounded-full'>View More</button>
+        <button className='px-10 hover:scale-105 rounded-md ease-linear py-4 bg-[#C6A02E] hover:bg-blue-950 text-white focus:outline-none transition duration-300 text-[16px]'>View More</button>
        </div>
     </main>
   )

@@ -8,7 +8,7 @@ function Block() {
         <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'><span className='px-4 bg-blue-950 text-[#C6A02E] py-2 '>What</span> We Do</h2>
       </div>
       <div className='grid gap-8 lg:grid-cols-2 lg:mt-8 mt-3  mx-auto justify-center'>
-        <div className='text-[16px] mt-3'>
+        <div className='text-gray-600 mt-3'>
           <p>Al Nasheet Chartered Accountants in Dubai is a highly regarded and renowned firm based in UAE, specializing in providing a range of accounting and financial consultancy services in Dubai and throughout the UAE. Our reputation is built on our commitment to excellence, professionalism, efficiency, and cost-effectiveness. Our team consists of certified chartered accountants with extensive industry experience.</p>
           <div className='grid grid-cols-1 md:grid-cols-2 mt-1 gap-6'>
             <div className=''>

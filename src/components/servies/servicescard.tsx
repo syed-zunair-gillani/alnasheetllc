@@ -51,7 +51,7 @@ function ServicesCard({ service }: any) {
           </div>
           <div className='mt-3 px-3'>
             <h3 className='text-[23px] font-semibold'>{service.title}</h3>
-            <p>{service.description}</p>
+            <p className='text-gray-600'>{service.description}</p>
           </div>
         </div>
         <div className="flip-box-back flex justify-center flex-col items-center rounded-xl">

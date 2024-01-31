@@ -10,8 +10,8 @@ function Quote() {
           <Link href="/">
             <img src="/cropped.webp" alt="" className='md:w-52 w-32' />
           </Link>
-          <h2 className='text-2xl text-[#001D49] text-center font-[500]'>Free Quote</h2>
         </div>
+        <h2 className='text-2xl -mt-7 text-[#001D49] text-center font-[500]'>Free Quote</h2>
         <div>
           <input type="text" className='border border-[#69727d] outline-none w-full py-2  mt-3 px-3' placeholder='Name' />
         </div>

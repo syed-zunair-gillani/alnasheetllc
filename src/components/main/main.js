@@ -10,7 +10,7 @@ function Main() {
           <p className='text-base md:text-lg lg:text-lg xl:text-xl mb-6 max-w-[600px] w-full'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique eveniet suscipit vero, recusandae deserunt atque quam rerum labore? atque quam rerum labore?
           </p>
-          <button className='px-7 py-3 bg-[#C6A02E] hover:bg-blue-950 rounded-full text-blue-950 focus:outline-none transition duration-300 text-[16px]'>
+          <button className='px-10 hover:scale-105 rounded-md ease-linear py-4 bg-[#C6A02E] hover:bg-blue-950 text-white focus:outline-none transition duration-300 text-[16px]'>
             Read More
           </button>
         </div>

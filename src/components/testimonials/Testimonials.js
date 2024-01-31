@@ -68,7 +68,7 @@ const Testimonials = () => {
             <div key={index} className='items-center justify-center p-2 mx-auto '>
               <div className='border border-[#FFBC00] p-6 rounded-xl bg-white'>
               <TfiQuoteRight className="text-6xl text-[#FFBC00] opacity-30"/>
-                <p className='text-gray-400 -mt-6 z-[1] relative'>{testimonial.text}</p>
+                <p className='text-black -mt-6 z-[1] relative'>{testimonial.text}</p>
                 <div className="flex gap-3 items-center mt-5">
                     <Image src="/images/p1.jpeg" alt="profile-image" width={80} height={80} className=' rounded-full h-[60px] w-[60px] object-cover'/>
                     <div>
