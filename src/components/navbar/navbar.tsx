@@ -65,7 +65,7 @@ function Navbar() {
           }
         </ul>
         <div className='lg:flex items-center gap-12'>
-            <button onClick={openModal} className='bg-[#C6A02E] px-4 hidden text-blue-950 lg:inline-block py-2 rounded-full'> Free Consultancy</button>
+            <button onClick={openModal} className='bg-[#C6A02E] px-4 hidden text-blue-950 lg:inline-block py-2 rounded-full'> Free consultation</button>
         </div>
       </div>
     </main>
