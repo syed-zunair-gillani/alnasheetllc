@@ -54,7 +54,7 @@ function Navbar() {
                     <ul className='pt-4'>
                       {
                         nav?.subNav?.map((sub: any, id: number) => (
-                          <li key={id} className='p-4 hover:bg-[#C6A02E]'><Link href="#" className='whitespace-nowrap'>{sub.name}</Link></li>
+                          <li key={id} className='p-4 hover:bg-[#C6A02E]'><Link href="#" className='whitespace-nowrap '>{sub.name}</Link></li>
                         ))
                       }
                     </ul>
@@ -65,7 +65,7 @@ function Navbar() {
           }
         </ul>
         <div className='lg:flex items-center gap-12'>
-            <button onClick={openModal} className='bg-[#C6A02E] px-4 hidden lg:inline-block py-2 rounded-full'> Free Consultancy</button>
+            <button onClick={openModal} className='bg-[#C6A02E] px-4 hidden text-blue-950 lg:inline-block py-2 rounded-full'> Free Consultancy</button>
         </div>
       </div>
     </main>

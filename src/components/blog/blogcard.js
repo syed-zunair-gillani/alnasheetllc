@@ -5,7 +5,7 @@ function Blogcard() {
   return (
     <main className='container mx-auto px-4 mt-16'>
     <div className=''>
-        <h2 className='md:text-[42px] text-[32px] font-[600] text-center'><span className='bg-[#C6A02E] md:py-2 py-1 px-3 text-white'>Our</span> Blog</h2>
+        <h2 className='md:text-[42px] text-[32px] font-[600] text-center'><span className='bg-blue-950 text-[#C6A02E] md:py-2 py-1 px-3'>Our</span> Blog</h2>
     </div>
        <div className='grid lg:grid-cols-3 md:grid-cols-2 mt-12 gap-10'>
            <div className='border rounded-xl border-gray-200 hover:shadow-xl overflow-hidden '>
@@ -34,7 +34,7 @@ function Blogcard() {
            </div>
        </div>
        <div className='text-center py-10'>
-        <button className='bg-blue-950 px-6 text-[22px] text-white p-2'>View More</button>
+        <button className='text-blue-950 px-8 text-[20px] hover:bg-blue-950 hover:text-[#C6A02E] bg-[#C6A02E] p-3 rounded-full'>View More</button>
        </div>
     </main>
   )
