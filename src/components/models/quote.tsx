@@ -1,11 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function Quote() {
   return (
     <main className='container mx-auto px-4 items-center '>
       <div className='py-2'>
-        <div>
-          <h2 className='text-[32px] text-[#001D49] text-center font-[500]'>Free Quote</h2>
+        <div className='flex flex-col justify-center items-center'>
+        <Link href="/">
+        <img src="/cropped.webp" alt="" className='md:w-52 w-32' />
+      </Link>
+          <h2 className='text-3xl text-[#001D49] text-center font-[500]'>Free Quote</h2>
         </div>
         <div>
           <input type="text" className='border border-[#69727d] outline-none w-full py-2  mt-3 px-3' placeholder='Name' />
@@ -37,7 +42,10 @@ function Quote() {
         <div>
           <textarea name="" id="" cols={2} rows={3} className='border border-[#69727d] outline-none w-full py-2  px-3' placeholder='Message' ></textarea>
         </div>
-        <div className='flex justify-end mt-4 '>
+        <div className='flex justify-end mt-4 gap-2'>
+          <Link href="https://wa.me/+97143214855" target="_blank">
+            <button className='bg-green-600 px-9 hover:scale-105 py-3 text-white font-[600] flex items-center gap-1 rounded-full'><IoLogoWhatsapp className="text-xl"/> Whatsapp</button>
+          </Link>
           <button className='bg-blue-950 px-9 hover:scale-105 py-3 text-white font-[600] rounded-full'>Send</button>
         </div>
       </div>

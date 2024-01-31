@@ -5,7 +5,7 @@ function Block() {
   return (
     <main className='container px-4 md:pb-10 mx-auto'>
       <div className='lg:mt-14 mt-8 '>
-        <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'><span className='px-4 py-2 text-white bg-blue-950 '>What</span> We Do</h2>
+        <h2 className='lg:text-[42px] text-[32px] font-[600] text-blue-950'><span className='px-4 text-white bg-[#C6A02E] py-2 '>What</span> We Do</h2>
       </div>
       <div className='grid gap-8 lg:grid-cols-2 lg:mt-8 mt-3  mx-auto justify-center'>
         <div className='text-[16px] mt-3'>

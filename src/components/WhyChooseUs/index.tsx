@@ -35,8 +35,8 @@ const WhyChooseUs = () => {
                                              <h6>{item.label}</h6>
                                              <h6>{item.persentage}%</h6>
                                         </div>
-                                        <div className='bg-[#172554] h-3 rounded-[4px]'>
-                                             <div className='bg-[#C6A02E] h-3 rounded-[4px]' style={{ width: `${item.persentage}%` }} />
+                                        <div className='bg-[#C6A02E] h-3 rounded-[4px]'>
+                                             <div className=' bg-[#172554] h-3 rounded-[4px]' style={{ width: `${item.persentage}%` }} />
                                         </div>
                                    </li>
                               ))
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
                </div>
                <div>
                     <Image src="/cheerful-business-team-discussing-project-L7SEHE4.jpeg" alt="image" width={400} height={400} className='w-full pl-10 lg:pl-0'/>
-                    <div className='bg-[#01B7D6] text-white p-7 z-10 relative lg:-ml-10 -mt-24 text-center w-[250px] lg:w-[300px] md:p-12 gap-4 text-xl lg:text-2xl rounded-xl shadow-lg'>
+                    <div className='bg-[#01B7D6] text-white p-7 z-10 relative lg:-ml-10 -mt-24 text-center w-[250px] lg:w-[302px] min-h-[160px] md:p-12 gap-4 text-xl lg:text-2xl rounded-xl shadow-lg'>
                          <h4 className='text-3xl lg:text-5xl font-semibold mt-2 md:mt-0'>15 <sup className='text-lg'>Th</sup></h4>
                          <p className='mt-2'>Years Experience</p>
                     </div>

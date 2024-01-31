@@ -5,7 +5,7 @@ import { FaMinus } from "react-icons/fa";
 
 const Faqs = () => {
 
-     const [id, setId] = useState<any>(1)
+     const [id, setId] = useState<any>(0)
      const handleFaq = (idx: any) => {
           if (id === idx) return setId(null)
           setId(idx)
@@ -23,14 +23,14 @@ const Faqs = () => {
                          {
                               faqs.map((item, idx) => (
                                    <li key={idx} onClick={() => handleFaq(idx)}>
-                                        <h6 className={`font-semibold mb-2 p-4 flex justify-between items-center gap-6 rounded-xl cursor-pointer text-xl text-[#001D49] border border-[#001D49]`}>
+                                        <h6 className={`font-semibold mb-2 p-4 flex justify-between items-center gap-6 rounded-xl cursor-pointer text-[#001D49] border border-[#001D49] ${id === idx && 'bg-[#001D49] text-white'}`}>
                                              {item.q}
                                              {
-                                                  id === idx ? <FaMinus className="text-2xl" /> : <FaPlus className="text-2xl" />
+                                                  id === idx ? <FaMinus className="text-2xl" /> : <FaPlus className="text-xl" />
                                              }
                                         </h6>
                                         { 
-                                             idx === id && <div className='text-gray-600 px-4 pb-5 pt-3'>
+                                             idx === id && <div className='text-gray-600 px-4 pb-5 pt-3 border border-[#001D49] rounded-xl mb-2'>
                                                   <p>{item.a}</p>
                                              </div>
                                         }

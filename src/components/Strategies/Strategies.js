@@ -9,7 +9,7 @@ function Strategies() {
       <div className='flex lg:w-[130vh] w-full gap-3 '>
         <div className='border-l-2 border-yellow-600 border'></div>
         <h2 className='text-[48px] lg:text-[48px] md:text-[36px] font-[700] text-white'>
-          Building <span className='bg-blue-950 lg:px-2 py-1 text-white'>Strategies</span> for Your Financial Future
+          Building <span className='bg-[#C6A02E] px-2 md:py-2 py-1 text-white'>Strategies</span> for Your Financial Future
         </h2>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-4 text-center justify-center items-center mt-10 text-white lg:gap-10'>
