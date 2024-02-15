@@ -3,8 +3,8 @@ import React from 'react'
 
 const FeatureAndBenefits = () => {
   return (
-    <>
-    <section className='container mx-auto px-4 items-center pt-12'>
+    <section className='bg-gray-100 my-16 pb-12'>
+    <div className='container mx-auto px-4 items-center pt-16'>
           <h2 className=" text-4xl text-center mb-10 tracking-tight font-bold text-gray-900 ">Features and Benefits</h2>
           <div className='mt-20'>
           {
@@ -23,8 +23,8 @@ const FeatureAndBenefits = () => {
                ))
           }
           </div>
+    </div>
     </section>
-    </>
   )
 }
 
