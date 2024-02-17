@@ -12,7 +12,7 @@ import FeatureAndBenefits from '@/components/featureAndBenefits'
 function ServicesPage({service}:any) {
   return (
     <>
-      <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
+      {/* <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
       <div className='pt-20 max-w-[900px] text-center mx-auto text-gray-700'>
         <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
       </div>
@@ -21,12 +21,12 @@ function ServicesPage({service}:any) {
       }
       {
         service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits}/>
-      }
+      } */}
       <Services />
       <Having />
-      {
+      {/* {
         service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>
-      }
+      } */}
       <Ourstages background />
       <WhyChooseUs />
     </>
@@ -36,16 +36,9 @@ function ServicesPage({service}:any) {
 export default ServicesPage
 
 
-
 export async function getServerSideProps({ params }: any) {
   const slug = params.services
-  const response = await fetch(`https://backend.alnasheetllc.com/wp-json/wp/v2/services?slug=${slug}`, {
-    method: "GET",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const response = await fetch(`${process.env.NEXT_PUBLIC_WP_BACKEND_API_URL}/services?slug=${slug}`);
   const service = await response.json();
   return {
     props: {

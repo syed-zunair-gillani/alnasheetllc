@@ -10,7 +10,7 @@ import { IoIosArrowForward } from "react-icons/io";
 function Slug() {
   return (
     <>
-      <PageBanner />
+      {/* <PageBanner /> */}
       <section className='mt-6 mb-10'>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-[70%_27%] py-8 gap-10">
