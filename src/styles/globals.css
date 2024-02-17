@@ -156,3 +156,6 @@ body{
 .clippath{
      clip-path: polygon(50% 0%, 92% 0, 100% 50%, 92% 100%, 0 100%, 0% 60%, 0 0);
 }
+.pricingcard ul{
+     list-style-type: disc;
+}

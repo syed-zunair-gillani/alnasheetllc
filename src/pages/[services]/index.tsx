@@ -11,30 +11,26 @@ import FeatureAndBenefits from '@/components/featureAndBenefits'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
-function ServicesPage() {
-  const hideSection = ['audit-and-assurance']
-  const { query }: any = useRouter()
+
+function ServicesPage({service}:any) {
 
   return (
     <>
-      <PageBanner />
+      <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
       <div className='pt-20 max-w-[900px] text-center mx-auto text-gray-700'>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam enim sapiente expedita rem quae! Quos reiciendis voluptate sunt, corporis iste accusantium ad fugit ipsam vero id minus voluptas magnam deserunt minima, mollitia animi delectus pariatur explicabo. Id fugit labore eaque nihil reprehenderit dolorem dolores sunt quaerat, atque qui maxime optio ex officiis laboriosam dignissimos. Est doloremque deserunt amet soluta sed.</p>
+        <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
       </div>
       {
-        !hideSection.includes(query?.services) && <ScopeOfWork />
+        service?.acf.scope && <ScopeOfWork data={service?.acf.scope}/>
       }
       {
-        hideSection.includes(query?.services) &&
-        <figure className='container mx-auto px-3 mt-16'>
-        <Image src='/process2.jpeg' alt="" width={900} height={600} className='w-full'/>
-      </figure>
+        service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits}/>
       }
-      
-      <FeatureAndBenefits />
       <Services />
       <Having />
-      <PricingTable />
+      {
+        service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>
+      }
       <Ourstages background />
       <WhyChooseUs />
     </>
@@ -43,3 +39,21 @@ function ServicesPage() {
 
 export default ServicesPage
 
+
+
+export async function getServerSideProps({ params }: any) {
+  const slug = params.services
+  const response = await fetch(`${process.env.NEXT_PUBLIC_WP_BACKEND_API_URL}/services?slug=${slug}`, {
+    method: "GET",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const service = await response.json();
+  return {
+    props: {
+      service : service[0],
+    },
+  };
+}
