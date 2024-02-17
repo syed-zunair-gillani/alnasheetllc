@@ -8,12 +8,8 @@ import PricingTable from '@/components/pricing-table/pricingTable'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ScopeOfWork from '@/components/scopeOfWork'
 import FeatureAndBenefits from '@/components/featureAndBenefits'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-
 
 function ServicesPage({service}:any) {
-
   return (
     <>
       <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
@@ -43,7 +39,7 @@ export default ServicesPage
 
 export async function getServerSideProps({ params }: any) {
   const slug = params.services
-  const response = await fetch(`${process.env.NEXT_PUBLIC_WP_BACKEND_API_URL}/services?slug=${slug}`, {
+  const response = await fetch(`https://backend.alnasheetllc.com/wp-json/wp/v2/services?slug=${slug}`, {
     method: "GET",
     mode: "no-cors",
     headers: {
