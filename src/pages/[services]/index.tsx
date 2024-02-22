@@ -12,7 +12,7 @@ import FeatureAndBenefits from '@/components/featureAndBenefits'
 function ServicesPage({service}:any) {
   return (
     <>
-      {/* <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
+      <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
       <div className='pt-20 max-w-[900px] text-center mx-auto text-gray-700'>
         <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
       </div>
@@ -21,12 +21,12 @@ function ServicesPage({service}:any) {
       }
       {
         service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits}/>
-      } */}
+      }
       <Services />
       <Having />
-      {/* {
+      {
         service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>
-      } */}
+      }
       <Ourstages background />
       <WhyChooseUs />
     </>
