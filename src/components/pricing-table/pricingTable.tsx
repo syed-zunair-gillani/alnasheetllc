@@ -2,9 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 
 const PricingTable = ({ data }: any) => {
-     console.log("🚀 ~ PricingTable ~ data:", data)
      return (
-          <section className="bg-gray-50">
+          <section className="bg-gray-50 md:mt-10">
                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">The Best Price For You</h2>
@@ -25,7 +24,7 @@ const PricingTable = ({ data }: any) => {
                                              className="text-white bg-[#001D49] hover:bg-[#C39F2B] focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-3 text-center my-8 ">Get
                                              started</Link>
                                         <div role="list" className="space-y-4 text-gray-900 dark:text-gray-400">
-                                             <div className=" items-center space-x-3 pricingcard" dangerouslySetInnerHTML={{__html: item.list_items}}/>
+                                             <div className=" items-center space-x-3 pricingcard !list-none" dangerouslySetInnerHTML={{__html: item.list_items}}/>
                                         </div>
                                    </div>
                               ))

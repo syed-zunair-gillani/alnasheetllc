@@ -10,25 +10,32 @@ import ScopeOfWork from '@/components/scopeOfWork'
 import FeatureAndBenefits from '@/components/featureAndBenefits'
 
 function ServicesPage({service}:any) {
+  console.log("🚀 ~ ServicesPage ~ service:", service)
   return (
     <>
       <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
-      <div className='pt-20 max-w-[900px] text-center mx-auto text-gray-700'>
+      <div className=' max-w-[900px] text-center mx-auto text-gray-700 pt-16 content'>
         <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
       </div>
       {
-        service?.acf.scope && <ScopeOfWork data={service?.acf.scope}/>
-      }
-      {
         service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits}/>
       }
-      <Services />
-      <Having />
+      {
+        service?.acf?.scopeprocess?.scope.length > 0 && <ScopeOfWork data={service?.acf?.scopeprocess}/>
+      }
+      {
+        service?.acf?.others?.having_trouble_managing_your_finances && <Having />
+      }
       {
         service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>
       }
-      <Ourstages background />
-      <WhyChooseUs />
+      <Services />
+      {
+        service?.acf?.others?.our_stages && <Ourstages background />
+      }
+      {
+        service?.acf?.others?.why_choose_us && <WhyChooseUs />
+      }
     </>
   )
 }
