@@ -18,13 +18,13 @@ function ServicesPage({service}:any) {
         <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
       </div>
       {
-        service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits}/>
+        service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits} title={service?.acf?.benefits_title}/>
       }
       {
         service?.acf?.scopeprocess?.scope.length > 0 && <ScopeOfWork data={service?.acf?.scopeprocess}/>
       }
       {
-        service?.acf?.others?.having_trouble_managing_your_finances && <Having />
+        service?.acf?.others?.having_trouble_managing_your_finances && <Having data={service?.acf?.call_to_action}/>
       }
       {
         service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>

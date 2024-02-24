@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-const FeatureAndBenefits = ({data}:any) => {
+const FeatureAndBenefits = ({data, title}:any) => {
   return (
     <section className='bg-gray-100 my-16 pb-12'>
     <div className='container mx-auto px-4 items-center pt-16'>
-          <h2 className=" text-4xl text-center mb-10 tracking-tight font-bold text-gray-900 ">Features and Benefits</h2>
+          <h2 className=" text-4xl text-center mb-10 tracking-tight font-bold text-gray-900 ">{title ? title : 'Features and Benefits'} </h2>
           <div className='mt-20'>
           {
                data?.map((item:any,idx:number)=>(
