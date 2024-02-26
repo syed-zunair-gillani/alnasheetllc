@@ -8,28 +8,41 @@ import PricingTable from '@/components/pricing-table/pricingTable'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ScopeOfWork from '@/components/scopeOfWork'
 import FeatureAndBenefits from '@/components/featureAndBenefits'
+import { useRouter } from 'next/router'
 
-function ServicesPage({service}:any) {
-  console.log("🚀 ~ ServicesPage ~ service:", service)
+function ServicesPage({ service }: any) {
+  const {query} =  useRouter()
   return (
     <>
-      <PageBanner data={{...service?.acf?.page_banner, title:service.title.rendered } } />
+      <PageBanner data={{ ...service?.acf?.page_banner, title: service.title.rendered }} />
       <div className=' max-w-[900px] text-center mx-auto text-gray-700 pt-16 content'>
-        <div dangerouslySetInnerHTML={{ __html:service?.content?.rendered }}/>
+        <div dangerouslySetInnerHTML={{ __html: service?.content?.rendered }} />
       </div>
       {
-        service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits} title={service?.acf?.benefits_title}/>
+        service?.acf.benefits && <FeatureAndBenefits data={service?.acf.benefits} title={service?.acf?.benefits_title} />
       }
       {
-        service?.acf?.scopeprocess?.scope.length > 0 && <ScopeOfWork data={service?.acf?.scopeprocess}/>
+        query.services?.includes('audit-') && service?.acf?.content2 &&
+        <div className='container mx-auto px-4 text-gray-700 pt-6 mb-20 content'>
+          <div dangerouslySetInnerHTML={{ __html: service?.acf?.content2 }} />
+        </div>
       }
       {
-        service?.acf?.others?.having_trouble_managing_your_finances && <Having data={service?.acf?.call_to_action}/>
+        service?.acf?.scopeprocess?.scope.length > 0 && <ScopeOfWork data={service?.acf?.scopeprocess} />
       }
       {
-        service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan}/>
+        service?.acf?.others?.having_trouble_managing_your_finances && <Having data={service?.acf?.call_to_action} />
+      }
+      {
+        service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan} />
       }
       <Services />
+      {
+        service?.acf?.content2 && !query.services?.includes('audit-') &&
+        <div className='container mx-auto px-4 text-gray-700 pt-6 mb-20 content'>
+          <div dangerouslySetInnerHTML={{ __html: service?.acf?.content2 }} />
+        </div>
+      }
       {
         service?.acf?.others?.our_stages && <Ourstages background />
       }
@@ -49,7 +62,7 @@ export async function getServerSideProps({ params }: any) {
   const service = await response.json();
   return {
     props: {
-      service : service[0],
+      service: service[0],
     },
   };
 }
