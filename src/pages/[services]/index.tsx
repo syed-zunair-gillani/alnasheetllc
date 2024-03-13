@@ -9,8 +9,10 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import ScopeOfWork from '@/components/scopeOfWork'
 import FeatureAndBenefits from '@/components/featureAndBenefits'
 import { useRouter } from 'next/router'
+import TwoColumnBlock from '@/components/block/TwoColumnBlock'
 
 function ServicesPage({ service }: any) {
+  console.log("🚀 ~ ServicesPage ~ service:", service)
   const {query} =  useRouter()
   return (
     <>
@@ -23,7 +25,7 @@ function ServicesPage({ service }: any) {
       }
       {
         query.services?.includes('audit-') && service?.acf?.content2 &&
-        <div className='container mx-auto px-4 text-gray-700 pt-6 mb-20 content'>
+        <div className='container mx-auto px-4 text-gray-700 pt-6 mb-20 content content2'>
           <div dangerouslySetInnerHTML={{ __html: service?.acf?.content2 }} />
         </div>
       }
@@ -36,13 +38,18 @@ function ServicesPage({ service }: any) {
       {
         service?.acf?.pricing_plan && <PricingTable data={service?.acf?.pricing_plan} />
       }
-      <Services />
+      {service?.acf?.left_right_content?.[0] && <TwoColumnBlock data={service?.acf?.left_right_content?.[0]}/>}
       {
         service?.acf?.content2 && !query.services?.includes('audit-') &&
-        <div className='container mx-auto px-4 text-gray-700 pt-6 mb-20 content'>
+        <div className='container mx-auto px-4 text-gray-700 pt-6 content content2'>
           <div dangerouslySetInnerHTML={{ __html: service?.acf?.content2 }} />
         </div>
       }
+      <Services />
+      {
+        service?.acf?.left_right_content?.[1] && <TwoColumnBlock data={service?.acf?.left_right_content?.[1]}/>
+      }
+      
       {
         service?.acf?.others?.our_stages && <Ourstages background />
       }

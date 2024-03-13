@@ -1,19 +1,15 @@
 import React from 'react'
+import ListScopeOfWork from './ListScopeOfWork'
+import CardScopeOfWork from './CardScopeOfWork'
 
 const ScopeOfWork = ({data}:any) => {
   return (
     <section className='container mx-auto px-4 items-center py-10 pt-8'>
-          <h2 className=" text-4xl text-center mb-14 tracking-tight font-bold text-gray-900 ">{data?.title}</h2>
-          <div className='grid grid-col-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 '>
+          <h2 className="text-[30px] text-center mb-10 tracking-tight font-semibold text-[#172554]">{data?.title}</h2>
+          <div className={`grid grid-col-1 gap-5  ${data?.design_type === 'List' ? 'md:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
           {
-               data?.scope?.map((item:any,idx:number)=>(
-                    <div key={idx} className={`border-[2px] relative border-[#C39F2B] rounded-xl text-gray-700 p-10 text-center ${item.title && 'pl-14 !text-left'}`}>
-                         <h3 className='font-semibold text-xl text-[#001D49]'>{item.title}</h3>
-                         <p>{item.info}</p>
-                         <span className='absolute font-semibold text-5xl text-gray-200 top-3 left-3'>{idx+1}</span>
-                    </div>
-               ))
-          }
+               data.design_type === 'List' ? <ListScopeOfWork data={data}/> : <CardScopeOfWork data={data}/>
+          }          
           </div>
     </section>
   )
