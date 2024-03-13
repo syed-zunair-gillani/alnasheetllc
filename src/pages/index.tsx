@@ -44,7 +44,7 @@ export default function Home() {
             </div>
         </div>
       </section>
-      <Block />
+       <Block />
       <Strategies />
       <Services heading/>
       <Having/>
