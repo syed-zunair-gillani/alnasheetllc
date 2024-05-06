@@ -10,10 +10,12 @@ import ScopeOfWork from '@/components/scopeOfWork'
 import FeatureAndBenefits from '@/components/featureAndBenefits'
 import { useRouter } from 'next/router'
 import TwoColumnBlock from '@/components/block/TwoColumnBlock'
+import AuditProcess from '@/components/AuditProcess/AuditProcess'
 
 function ServicesPage({ service }: any) {
-  console.log("🚀 ~ ServicesPage ~ service:", service)
+  console.log("🚀 ~ ServicesPage ~ service:", service?.acf?.scopeprocess)
   const {query} =  useRouter()
+  console.log("🚀 ~ ServicesPage ~ query:", query)
   return (
     <>
       <PageBanner data={{ ...service?.acf?.page_banner, title: service.title.rendered }} />
@@ -30,7 +32,20 @@ function ServicesPage({ service }: any) {
         </div>
       }
       {
-        service?.acf?.scopeprocess?.scope.length > 0 && <ScopeOfWork data={service?.acf?.scopeprocess} />
+        service?.acf?.scopeprocess?.length > 0 &&
+          service?.acf?.scopeprocess.map((item:any,id:number)=>(
+              <div key={id}>
+                {
+                  item.design_type === 'List' && <ScopeOfWork data={item} />
+                }
+                {
+                  item.design_type === 'Card' && <ScopeOfWork data={item} />
+                }
+                {
+                  item.design_type === 'Circle' && <AuditProcess data={item}/>
+                }
+              </div>
+          ))
       }
       {
         service?.acf?.others?.having_trouble_managing_your_finances && <Having data={service?.acf?.call_to_action} />
@@ -40,7 +55,7 @@ function ServicesPage({ service }: any) {
       }
       {service?.acf?.left_right_content?.[0] && <TwoColumnBlock data={service?.acf?.left_right_content?.[0]}/>}
       {
-        service?.acf?.content2 && !query.services?.includes('audit-') &&
+        service?.acf?.content2 && !query?.services?.includes('audit-') &&
         <div className='container mx-auto px-4 text-gray-700 pt-6 content content2'>
           <div dangerouslySetInnerHTML={{ __html: service?.acf?.content2 }} />
         </div>
