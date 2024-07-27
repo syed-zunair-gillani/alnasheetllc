@@ -3,7 +3,7 @@ import React from 'react'
 
 const FeatureAndBenefits = ({data, background}:any) => {
   return (
-    <section className={` my-16 pb-12 ${background && 'bg-gray-100'}`}>
+    <section className={`pt-0 pb-12 mt-20 ${background && 'bg-gray-100'}`}>
     <div className='container mx-auto px-4 items-center pt-16'>
           <h2 className="text-[30px] text-center mb-10 tracking-tight font-semibold text-[#172554] ">{data?.benefits_title ? data?.benefits_title : 'Features and Benefits'} </h2>
           
