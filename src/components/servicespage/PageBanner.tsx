@@ -6,7 +6,7 @@ function PageBanner({data}:any) {
       <div
         className="relative bg-cover bg-center h-80 flex items-center justify-center text-white"
         style={{
-          backgroundImage: `url("${data?.backround_image}")`,
+          backgroundImage: `url("${data?.background_image}")`,
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>

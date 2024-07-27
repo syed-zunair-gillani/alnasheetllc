@@ -1,15 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 
-const PricingTable = ({ data }: any) => {
+const PricingTable = ({ data, title, info, background }: any) => {
      return (
-          <section className="bg-gray-50 md:mt-10">
+          <section className={background && 'bg-gray-50'}>
                <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">The Best Price For You</h2>
-                         <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on
-                              markets where technology, innovation, and capital can unlock long-term value and drive economic
-                              growth.</p>
+                         <h2 className="text-[30px] text-center mb-10 tracking-tight font-semibold text-[#172554]">{title}</h2>
+                         <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">{info}</p>
                     </div>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
                          {
@@ -17,7 +15,7 @@ const PricingTable = ({ data }: any) => {
                                    <div key={idx}
                                         className="flex flex-col p-6 mx-auto max-w-xl text-center bg-white rounded-lg border border-gray-400 shadow xl:max-w-lg xl:p-8">
                                         <h3 className="mb-4 text-2xl font-medium text-gray-900 capitalize">{item?.type}</h3>
-                                        <span className="text-5xl font-extrabold text-gray-900 ">{item.price}</span>
+                                        <span className="text-5xl font-extrabold text-gray-900 ">${item.price}</span>
                                         <p className="mt-4 mb-1 text-gray-500 text-light dark:text-gray-400">{item?.short_info}</p>
 
                                         <Link href={item?.link}

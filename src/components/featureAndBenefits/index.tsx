@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 
-const FeatureAndBenefits = ({data, title}:any) => {
+const FeatureAndBenefits = ({data, background}:any) => {
   return (
-    <section className='bg-gray-100 my-16 pb-12'>
+    <section className={` my-16 pb-12 ${background && 'bg-gray-100'}`}>
     <div className='container mx-auto px-4 items-center pt-16'>
-          <h2 className="text-[30px] text-center mb-10 tracking-tight font-semibold text-[#172554] ">{title ? title : 'Features and Benefits'} </h2>
+          <h2 className="text-[30px] text-center mb-10 tracking-tight font-semibold text-[#172554] ">{data?.benefits_title ? data?.benefits_title : 'Features and Benefits'} </h2>
+          
           <div className='mt-20'>
           {
-               data?.map((item:any,idx:number)=>(
+               data?.benefit?.map((item:any,idx:number)=>(
                     <div key={idx} className='grid grid-cols-1 gap-8 md:grid-cols-2 mb-12 items-center'>
                          <div className='flex items-center md:items-end relative'>
                               <figure className='border-[2px] border-[#C6A02E] p-5 rounded-full bg-white absolute z-10'>
