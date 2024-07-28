@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 
 const ApprovedAuditors = ({data}:any) => {
-  console.log("🚀 ~ ApprovedAuditors ~ data:", data)
 
   return (
     <section className="py-20 bg-[url('/vat-uae_bg.png')] bg-cover">
