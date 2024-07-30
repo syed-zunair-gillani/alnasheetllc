@@ -24,7 +24,7 @@ function ServicesPage({ service }: any) {
       <div className='max-w-[900px] text-center mx-auto text-gray-700 pt-16 content'>
         <div dangerouslySetInnerHTML={{ __html: service?.content?.rendered }} />
       </div>
-      <FeatureAndBenefits data={service?.acf.features_and_benefits_group} />
+      <ScopeOfWork data={service?.acf.features_and_benefits_group} />
       <ApprovedAuditors data={service?.acf?.approved_auditors_wrapper}/>
       <AuditProcess data={service?.acf?.process} title={service?.acf?.process_section_heading} />
       <RequiredDocumentForAudit data={service?.excerpt?.rendered} background/>
