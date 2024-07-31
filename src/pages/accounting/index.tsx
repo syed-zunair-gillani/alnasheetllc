@@ -11,7 +11,7 @@ function AccountingPage({ service }: any) {
   return (
     <>
       <PageBanner data={{ ...service?.acf?.page_banner_group, title: service.title.rendered }} />
-      <div className=' max-w-[900px] text-center mx-auto text-gray-700 pt-16 content'>
+      <div className=' max-w-[900px] text-center mx-auto text-gray-700 pt-16 content pb-16'>
         <div dangerouslySetInnerHTML={{ __html: service?.content?.rendered }} />
       </div>
       <FeatureAndBenefits data={service?.acf.features_and_benefits_group} background/>

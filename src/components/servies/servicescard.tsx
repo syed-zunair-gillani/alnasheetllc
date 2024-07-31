@@ -67,7 +67,7 @@ function ServicesCard({ service }: any) {
 function ServicesCardContainer({ heading, background }: any) {
   return (
     <div
-      className={` items-center py-10 pt-10 ${
+      className={` items-center py-16 pt-10 ${
         background && "bg-gray-50"
       } ${!heading && "pt-14 pb-16"}`}
     >
