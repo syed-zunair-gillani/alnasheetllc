@@ -144,6 +144,8 @@ body{
 .content ul{
      margin-top: .8rem;
      color: gray;
+     list-style: disc;
+     padding-left: 1.3rem;
 }
 .content ul li{
      margin-top: 10px;

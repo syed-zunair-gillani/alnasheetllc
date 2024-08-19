@@ -1,5 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
+const backendURL = process.env.NEXT_PUBLIC_WP_BACKEND_URL
 export const client = new ApolloClient({
-  uri: `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/graphql`,
+  uri: `${backendURL}/graphql`,
   cache: new InMemoryCache(),
 });

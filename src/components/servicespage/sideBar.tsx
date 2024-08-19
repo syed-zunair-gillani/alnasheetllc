@@ -3,7 +3,7 @@ import React from 'react'
 import { MdOutlineArrowOutward, MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import ContactForm from '../contact/form'
 
-const SideBar = () => {
+const SideBar = ({servicesFromCategory}:any) => {
   return (
     <aside>
       <div className="bg-[#172554] py-10 px-8 rounded-xl">
@@ -13,10 +13,10 @@ const SideBar = () => {
           </h3>
           <ul>
             {
-              [1, 2, 3, 4, 5, 6, 7].map((item, idx) => (
+              servicesFromCategory?.map((item:any, idx:number) => (
                 <li className="flex gap-3 items-center mt-2 " key={idx}>
                   <MdOutlineKeyboardArrowRight className="text-3xl text-blue-500 font-[800]" />
-                  <span className="lg:text-lg font-normal hover:text-blue-500">Payroll Services</span>
+                  <span className="lg:text-lg font-normal hover:text-blue-500">{item?.title}</span>
                 </li>
               ))
             }
@@ -34,7 +34,7 @@ const SideBar = () => {
         <div className="z-10 text-center container mx-auto px-4 ">
           <h1 className="text-xl font-bold">Having Trouble Managing Your Finance?</h1>
           <div className='flex items-center justify-center gap-2 text-center mt-4'>
-            <Link href="/" className="bg-[#C6A02E]/80 hover:bg-[#C6A02E] shadow-xl text-white py-3 rounded-md px-6 flex items-center gap-1">
+            <Link href="/contact" className="bg-[#C6A02E]/80 hover:bg-[#C6A02E] shadow-xl text-white py-3 rounded-md px-6 flex items-center gap-1">
               <button>CONTACT US NOW</button>
               <MdOutlineArrowOutward className="text-xl" />
             </Link>
